@@ -1,0 +1,25 @@
+function getElementByXpath(path) {
+    return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+}
+document.addEventListener("keypress", function(event) {
+    if(this.getElementById('countArrange').innerHTML.split('من')[0] == this.getElementById('countArrange').innerHTML.split('من')[1]){
+         alert("روح للقسم البعدو وحط الكود تاني")
+    }else{
+        if (event.keyCode == 13) {
+            getElementByXpath("/html/body/div[2]/div[1]/footer/div/div[4]/a").click()
+        }
+         if (event.keyCode == 90) {
+            getElementByXpath("/html/body/div[2]/div[1]/main/div/div[1]/div/div/div[3]/div[2]/label").click()
+        }
+         if (event.keyCode == 88) {
+            getElementByXpath("/html/body/div[2]/div[1]/main/div/div[1]/div/div/div[3]/div[3]/label").click()
+        }
+        if (event.keyCode == 67) {
+            getElementByXpath("/html/body/div[2]/div[1]/main/div/div[1]/div/div/div[3]/div[4]/label").click()
+        }
+        if (event.keyCode == 86) {
+            getElementByXpath("/html/body/div[2]/div[1]/main/div/div[1]/div/div/div[3]/div[5]/label").click()
+        }
+        
+    }
+});
